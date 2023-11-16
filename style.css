@@ -1,0 +1,139 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: all 0.5s ease;
+}
+
+body {
+    background: linear-gradient(to bottom right, rgb(180, 83, 189), rgb(119, 25, 207));
+
+}
+
+.container {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    font-size: 20px;
+    place-items: center;
+}
+
+.calculator {
+    position: relative;
+    height: 80vh;
+    width: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+
+
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    cursor: pointer;
+
+}
+
+.theme-toggler.active {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+#display {
+    display: flex;
+    margin: 10px;
+    color: aliceblue;
+    align-items: flex-end;
+    justify-content: end;
+    height: 7.5em;
+    overflow-x: scroll;
+    padding-right: 15px;
+    font-size: 19px;
+}
+
+#display::-webkit-scrollbar {
+    display: block;
+}
+
+.buttons {
+
+    margin: 15px;
+}
+
+button {
+
+    width: 49px;
+    height: 49px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    margin: 4px;
+    transition: all 200ms ease;
+}
+
+button:hover {
+    transform: scale(1.16);
+}
+
+button#equal {
+    height: 110px;
+}
+
+
+
+/*white mood*/
+.calculator {
+    background-color: azure;
+}
+
+.calculator #display {
+    color: rgb(0, 0, 0);
+}
+
+button#equal {
+    height: 110px;
+}
+
+
+button#clear {
+    background-color: rgb(7, 128, 168);
+}
+
+/*dark mood*/
+.calculator.dark {
+    background-color: rgb(23, 33, 53);
+}
+
+.calculator.dark #display {
+    color: aliceblue;
+}
+
+button#equal {
+    height: 110px;
+    background-color: rgb(1, 167, 15);
+}
+
+button.opt-btn {
+    background-color: rgb(230, 158, 75);
+}
+
+button#clear {
+    background-color: rgb(7, 128, 168);
+}
